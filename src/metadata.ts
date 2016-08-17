@@ -44,6 +44,17 @@ export interface AppMetadata extends Metadata {
    *linux-only.* The [license](https://docs.npmjs.com/files/package.json#license) name.
    */
   readonly license?: string | null
+
+  /*
+  The application id. Used as
+  [CFBundleIdentifier](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102070) for MacOS and as
+  [Application User Model ID](https://msdn.microsoft.com/en-us/library/windows/desktop/dd378459(v=vs.85).aspx) for Windows.
+
+  For windows only NSIS target supports it. Squirrel.Windows is not fixed yet.
+
+  Defaults to `com.electron.${name}`. It is strongly recommended that an explicit ID be set.
+   */
+  readonly appId?: string | null
 }
 
 /*

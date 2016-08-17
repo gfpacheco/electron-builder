@@ -51,6 +51,10 @@ export class AppInfo {
       return this.devMetadata.build.appId
     }
 
+    if (this.metadata.appId != null) {
+      return this.metadata.appId
+    }
+
     if (appId == null) {
       return `com.electron.${this.metadata.name.toLowerCase()}`
     }
