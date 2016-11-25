@@ -48,6 +48,10 @@ export class AppInfo {
       appId = this.devMetadata.build.appId
     }
 
+    if (this.metadata.appId != null) {
+      appId = this.metadata.appId
+    }
+
     const generateDefaultAppId = () => {
       return `com.electron.${this.metadata.name.toLowerCase()}`
     }
